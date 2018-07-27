@@ -64,7 +64,10 @@ for($i=0; $i<count($TableArray); $i++){
     <?php
     function addList($table,$tableName){
         $str = '';
-        for($a=0; $a<count($table); $a++){
+        if(!$table){
+            $table = [];
+        }
+       for($a=0; $a<count($table); $a++){
            // var_export($table);
            @ $str .= '<li><a href="Detail.php?type='.$tableName.'&id='.$table[$a]['id'].'">'.$table[$a]['name'].'</a></li>';
         }
@@ -78,7 +81,7 @@ for($i=0; $i<count($TableArray); $i++){
         <a class="more" href="more.php?type='.$TableArray[$i].'">更多</a>
         <hr/>
         <ul>
-            '. addList($dataArray[$i],$TableArray[$i]).'
+            '. addList(@$dataArray[$i],$TableArray[$i]).'
         </ul>
         <hr/>
     </div>';
