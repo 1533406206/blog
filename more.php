@@ -9,7 +9,6 @@ $i = 0;
 while($row = mysqli_fetch_assoc($reuslt)){
     array_push($dataArray,$row);
 }
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -32,7 +31,6 @@ while($row = mysqli_fetch_assoc($reuslt)){
             width:80%;
             margin:0px auto;
             text-align: left;
-
         }
         ul{
             list-style: none;
@@ -72,7 +70,6 @@ while($row = mysqli_fetch_assoc($reuslt)){
                     case "learnofweektable":
                             echo "周计划";
                         break;
-
         }
     ?>
 </div>
@@ -82,7 +79,6 @@ while($row = mysqli_fetch_assoc($reuslt)){
              echo "<ul>
                 <li class='first_child'>".$dataArray[$i]['name']."<span>撰写时间：".$dataArray[$i]['Wtime']."</span></li>
                 <li>".$dataArray[$i]['content']."</li>
-                
                    </ul>";
         }
     ?>

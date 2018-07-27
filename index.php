@@ -15,7 +15,6 @@ for($i=0; $i<count($TableArray); $i++){
     }
     $j=0;
 }
-//var_export($dataArray);
 ?>
 <!doctype html>
 <html lang="en">
@@ -85,42 +84,6 @@ for($i=0; $i<count($TableArray); $i++){
     </div>';
     }
     ?>
-
-<!--    <div class="contentDetail">-->
-<!--        <span class="contentTop">每日代码</span>-->
-<!--        <a class="more" href="more.php?type=1">更多</a>-->
-<!--        <hr/>-->
-<!--        <ul>-->
-<!--            <li><a href="Detail.php?type=1&id=1">查看</a></li>-->
-<!--            <li><a href="Detail.php?">查看</a></li>-->
-<!--            <li><a href="">查看</a></li>-->
-<!--        </ul>-->
-<!--        <hr/>-->
-<!--    </div>-->
-<!---->
-<!--    <div class="contentDetail">-->
-<!--        <span class="contentTop">每日代码</span>-->
-<!--        <a class="more" href="more.php?type=2">更多</a>-->
-<!--        <hr/>-->
-<!--        <ul>-->
-<!--            <li><a href="">查看</a></li>-->
-<!--            <li><a href="">查看</a></li>-->
-<!--            <li><a href="">查看</a></li>-->
-<!--        </ul>-->
-<!--        <hr/>-->
-<!--    </div>-->
-<!---->
-<!--    <div class="contentDetail">-->
-<!--        <span class="contentTop">每日代码</span>-->
-<!--        <a class="more" href="">更多</a>-->
-<!--        <hr/>-->
-<!--        <ul>-->
-<!--            <li><a href="">查看</a></li>-->
-<!--            <li><a href="">查看</a></li>-->
-<!--            <li><a href="">查看</a></li>-->
-<!--        </ul>-->
-<!--        <hr/>-->
-<!--    </div>-->
 </div>
 
 </body>

@@ -6,7 +6,6 @@ $TableArray = [];
 while($row = mysqli_fetch_assoc($result)){
     array_push($TableArray,$row['Tables_in_blog']);
 }
-//var_export($TableArray);
 /*
  * 此函数生成编写文章选择列表
  * @param $TableArray array 有多少张表就生成多少项
@@ -73,7 +72,6 @@ while($row = mysqli_fetch_assoc($result)){
             font-weight:bold;
         }
     </style>
-
 </head>
 <body>
 <div class="top"><h1>编写页面</h1></div>
@@ -105,35 +103,16 @@ while($row = mysqli_fetch_assoc($result)){
         }
         echo addNav($TableArray);
         ?>
-<!--        <li key="1" onclick="viewTxt(this)">编写目录</li>-->
-<!--        <li key="2" onclick="viewTxt(this)">编写目录</li>-->
-<!--        <li key="3" onclick="viewTxt(this)">编写目录</li>-->
-<!--        <li key="4" onclick="viewTxt(this)">编写目录</li>-->
-<!--        <li key="5" onclick="viewTxt(this)">编写目录</li>-->
-<!--        <li key="6" onclick="viewTxt(this)">编写目录</li>-->
-<!--        <li key="7" onclick="viewTxt(this)">编写目录</li>-->
-<!--        <li key="8" onclick="viewTxt(this)">编写目录</li>-->
     </ul>
-<!--    <form action="form.php" class="contentDetail">-->
-<!--        标题：<input class="title" type="text"/>-->
-<!--              <br/>-->
-<!--        内容：<br/>-->
-<!--            <textarea name="" id="" cols="30" rows="10"></textarea>-->
-<!--            <input id="handle" type="submit" value="保存"/>-->
-<!--            <input id="handle" type="reset" value="重置"/>-->
-<!--    </form>-->
-
 </div>
-
 </body>
 <script>
     var content = document.getElementsByClassName('content')[0];
     var ul = document.getElementsByTagName('ul')[0];
-    //console.log(ul);
+
     function viewTxt(e){
         console.log(e.innerHTML);
         console.log(e.getAttribute('key'));
-
         content.innerHTML = '    <ul>\n'  +
             ul.innerHTML +
             '    </ul>\n' +
@@ -145,52 +124,5 @@ while($row = mysqli_fetch_assoc($result)){
             '            <input id="handle" type="reset" value="重置"/>\n' +
             '    </form>'
     };
-   // var li = document.getElementsByTagName('li');
-
-   //  function addTxtToContent(str,that){
-   //
-   //      console.log(this)
-   //
-   //
-   //      content.innerHTML = '<ul>\n' +
-   //          '        <li key="1">编写目录</li>\n' +
-   //          '        <li key="2">编写目录</li>\n' +
-   //          '        <li key="3">编写目录</li>\n' +
-   //          '        <li key="4">编写目录</li>\n' +
-   //          '        <li key="5">编写目录</li>\n' +
-   //          '        <li key="6">编写目录</li>\n' +
-   //          '        <li key="7">编写目录</li>\n' +
-   //          '        <li key="8">编写目录</li>\n' +
-   //          '    </ul>\n' +
-   //          '    <div class="contentDetail">\n' +
-   //          '        标题：<input class="title" type="text"><br/>\n' +
-   //          '        内容：<br/><textarea name="" id="" cols="30" rows="10"></textarea></div>\n' +
-   //          '            <input id="handle" type="submit" value="保存"/>\n' +
-   //          '            <input id="handle" type="reset" value="重置"/>\n' +
-   //          '    </div>';
-   //  }
-   // // console.log(li);
-   //  for(var i=0; i<li.length;i++) {
-   //
-   //      (function () {
-   //          var that = this;
-   //
-   //              var clic = function(i){
-   //              console.log(that);
-   //
-   //              console.log(i.target.getAttribute('key'));
-   //              if(i.target.getAttribute('key') == '1'){
-   //
-   //                      //addTxtToContent(1,that);
-   //                      //that.clic.call(this);
-   //                      //console.log(this)
-   //              }else if(i.target.getAttribute('key') == '2'){
-   //                      addTxtToContent(2);
-   //              }
-   //          }
-   //          li[i].onclick = clic;
-   //      })(i);
-   //
-   //  }
 </script>
 </html>
