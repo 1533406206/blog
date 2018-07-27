@@ -74,10 +74,27 @@ for($i=0; $i<count($TableArray); $i++){
        // echo $str;
         return $str;
     }
-    //addList($dataArray[1]);
+    //addList($dataArray[0]);
     for($i=0;$i<count($TableArray);$i++){
+        switch ($TableArray[$i]){
+            case 'codeofdaytable':
+                 $name = '日代码';
+                break;
+            case 'thinkofdaytable':
+                $name = '日总结';
+                break;
+            case "thinkofweektable":
+                $name  = "周总结";
+                break;
+            case "learnofdaytable":
+                $name = '日计划';
+                break;
+            case "learnofweektable":
+                $name = '周计划';
+                break;
+        }
         echo '<div class="contentDetail">
-        <span class="contentTop">每日代码</span>
+        <span class="contentTop">'.$name.'</span>
         <a class="more" href="more.php?type='.$TableArray[$i].'">更多</a>
         <hr/>
         <ul>
